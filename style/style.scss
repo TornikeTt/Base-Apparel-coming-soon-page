@@ -1,0 +1,132 @@
+/* for flexbox */
+@mixin flex($direction, $justify, $align) { 
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+$colors: (  
+    backgroundColor: 
+    linear-gradient(135deg, hsl(0, 0%, 100%),  hsl(0, 100%, 98%) ),
+    buttonColor: 
+    linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%) ),
+    TextColor: hsl(0, 36%, 70%)
+);
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body { 
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: map-get($colors, backgroundColor)
+}
+
+main { 
+    width: 100%;
+    display: flex;
+}
+
+.left-side-text { 
+    font-family: "Josefin Sans";
+    flex: 1;
+    padding: 50px 8%;
+    @include flex(column, center, flex-start);
+
+    .logo { 
+        margin-bottom: 100px;
+    }
+
+    h1 { 
+        font-size: 60px;
+        text-transform: uppercase;
+        letter-spacing: 20px;
+        line-height: 70px;
+        width: 150px;
+
+        span { 
+            color: map-get($colors, TextColor);
+            font-weight: lighter;
+        }
+    }
+
+    p { 
+        color: map-get($colors, TextColor);
+        margin-top: 20px;
+        width: 430px;
+        line-height: 25px;
+    }
+}
+
+form { 
+    width: 430px;
+    height: 50px;
+    margin-top: 25px;
+    position: relative; 
+
+    input { 
+        width: 430px;
+        height: 50px;
+        border: 1px solid map-get($colors, TextColor);
+        border-radius: 20px;
+        padding-left: 20px;
+        outline: none;
+        &::placeholder{ 
+            color: map-get($colors, TextColor);
+        }
+    }
+
+    .arrow { 
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 80px;
+        height: 50px;
+        background-image: map-get($colors, buttonColor);
+        border-radius: 20px;
+
+        /* flexbox use for arrow icone */
+        @include flex(row , center, center);
+
+        cursor: pointer;
+    }
+
+    .error { 
+        width: 80px;
+        height: 50px;
+        position: absolute;
+        top: 0px;
+        right: 70px;
+        @include flex(row , center, center);
+
+        img { 
+            display: none;
+        }
+    }
+}
+
+small { 
+    display: none;
+    margin-top: 15px;
+    margin-left: 20px;
+    color: map-get($colors, TextColor);
+}
+
+.right-side-photo { 
+    flex: 1;
+    picture { 
+        img {
+            width: 100%;
+            height: 100vh;
+        }
+    }
+}
+
+
+@import "_Mobile.scss";

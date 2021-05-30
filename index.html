@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Apparel coming soon page</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+</head>
+    <body>
+
+        <main> 
+            <div class="left-side-text"> 
+               <img src="images/logo.svg" alt="logo" class="logo" />
+               <h1> <span>We're</span> coming soon</h1>
+               <p>Hello fellow shoppers! We're currently building our new 
+               fashion store. Add your email below to stay up-to-date with 
+               announcements and our launch deals.</p>
+
+               <form> 
+                    <input type="email" placeholder="Email Address"/> 
+                    <div class="arrow"> 
+                        <img src="images/icon-arrow.svg"
+                        alt="arrow iconde for button" />
+                    </div>
+                    <div class="error"> 
+                        <img src="images/icon-error.svg" alt="error icone" />  
+                    </div>
+               </form>
+
+                <small>Please provide a valid email</small>
+            </div>
+
+            <div class="right-side-photo"> 
+                <picture>
+                    <source media="(max-width: 375px)" 
+                    srcset="images/hero-mobile.jpg" />
+                    <img  src="images/hero-desktop.jpg"
+                    alt="girl photo"/>
+                </picture> 
+            </div>
+
+        </main> 
+
+        <script src="script.js"></script>
+    </body>
+</html>

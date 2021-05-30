@@ -1,0 +1,58 @@
+@media (max-width: 375px) { 
+    body { 
+        height: 800px;
+        overflow: visible;
+    }
+
+    .left-side-text { 
+        padding: 0px;
+        @include flex(column, center, center);
+
+        .logo { 
+            margin-top: 15px;
+            margin-left: 15px;
+            align-self: flex-start;
+            width: 120px;
+        }
+
+        h1 { 
+            margin-top: 250px;
+            width: 375px;
+            text-align: center;
+            font-size: 40px;
+            line-height: 50px;
+            letter-spacing: 10px;
+        }
+
+        p { 
+            text-align: center;
+            width: 350px;
+        }
+    }
+    
+    form { 
+        width: 350px;
+        input {  
+            width: 350px;
+        }
+    }
+
+    .right-side-photo { 
+        position: absolute;
+        top: 80px;
+        flex: 0;
+
+        picture { 
+            img {
+                width: 375px;
+                height: 100%;
+            }
+        }
+    }
+    
+    small { 
+       align-self: flex-start; 
+       margin-left: 30px;
+    }
+
+}
